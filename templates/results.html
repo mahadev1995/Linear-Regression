@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+
+	<body>
+		<div class="container-1">
+			<header>Housing Price Prediction Using Linear Regression</header>
+		</div>
+
+		<div class="container-3" >
+			<table style='border: 1px solid #900; margin-top: 20px; font-size: large;padding: 10px;'>
+				<tr>
+					<th>Feature</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td>Number of Floors</td>
+					<td>{{floor}}</td>
+				</tr>
+
+				<tr>
+					<td>Land Area</td>
+					<td>{{land}}</td>
+				</tr>
+				<tr>
+					<td>Number of Bedrooms</td>
+					<td>{{bed}}</td>
+				</tr>
+				<tr>
+					<td>Number of Bathrooms</td>
+					<td>{{bath}}</td>
+				</tr>
+				<tr>
+					<td>Year of Construction</td>
+					<td>{{yr}}</td>
+				</tr>
+
+			</table>
+		</div>
+
+		
+	    <h2 style="color:red;">Price Predicted: INR {{ prediction }} </h2>
+	    
+
+	</div>   
+
+    
+
+</body>
+</html>
+
+
