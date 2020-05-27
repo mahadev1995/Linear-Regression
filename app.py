@@ -32,7 +32,7 @@ def predict():
 
         data = pd.DataFrame([[bedrooms, bathrooms, area, floors, year]])
         my_prediction = rgr.predict(data)
-    return render_template('results.html', prediction = my_prediction[0],bed = bedrooms, bath = bathrooms, floor = floors, yr = year,land = area)
+    return render_template('results.html', prediction = int(round(my_prediction[0])),bed = bedrooms, bath = bathrooms, floor = floors, yr = year,land = area)
 
 if __name__ == '__main__':
     app.run(debug = True)
